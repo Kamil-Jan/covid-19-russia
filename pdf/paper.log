@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.12.7)  20 DEC 2020 18:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.12.7)  20 DEC 2020 18:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -649,83 +649,97 @@ Underfull \hbox (badness 10000) in paragraph at lines 127--130
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 146--157
+Underfull \hbox (badness 10000) in paragraph at lines 149--155
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 158--166
+Underfull \hbox (badness 10000) in paragraph at lines 156--162
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 196--201
-
- []
-
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 202--208
+Underfull \hbox (badness 10000) in paragraph at lines 163--171
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 209--214
+Underfull \hbox (badness 10000) in paragraph at lines 172--179
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 224--228
+Underfull \hbox (badness 10000) in paragraph at lines 180--185
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 229--233
+Underfull \hbox (badness 10000) in paragraph at lines 186--193
+
+ []
+
+[3] [4]
+Underfull \hbox (badness 10000) in paragraph at lines 269--274
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 234--238
+Underfull \hbox (badness 10000) in paragraph at lines 275--281
 
  []
 
-[4] (./bibliography.tex
-LaTeX Font Info:    Trying to load font information for T2A+cmtt on input line 
-15.
- (/usr/share/texmf-dist/tex/latex/cyrillic/t2acmtt.fd
-File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
-))
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 255.
 
-[5]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 255.
+Underfull \hbox (badness 10000) in paragraph at lines 282--287
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 297--301
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 302--306
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 307--311
+
+ []
+
+[5] [6] (./bibliography.tex)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 324.
+ [7]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 324.
  (./paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 255.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 255.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 324.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 324.
 Package rerunfilecheck Info: File `paper.out' has not changed.
-(rerunfilecheck)             Checksum: E500634DE312BFBE00B0658E395F1958;1620.
+(rerunfilecheck)             Checksum: 54941D60F70D7915C53FF001A987D94E;1716.
  ) 
 Here is how much of TeX's memory you used:
- 11424 strings out of 480478
- 163099 string characters out of 5905959
- 444982 words of memory out of 5000000
- 27294 multiletter control sequences out of 15000+600000
- 545119 words of font info for 48 fonts, out of 8000000 for 9000
+ 11405 strings out of 480478
+ 162480 string characters out of 5905959
+ 444918 words of memory out of 5000000
+ 27278 multiletter control sequences out of 15000+600000
+ 545146 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  34i,5n,36p,838b,407s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc}</usr/share/
-texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf-dist/font
-s/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf-dist/fonts/type1/public/
-cm-super/sfbx1728.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx20
-74.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/sh
-are/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf-dist/
-fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf-dist/fonts/type1/pub
-lic/cm-super/sfrm1728.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sf
-ti0800.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></us
-r/share/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on paper.pdf (6 pages, 189519 bytes).
+{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc}{/usr/share/
+texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texmf-dist/fon
+ts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf-dist/fonts/type1/public
+/cm-super/sfbx1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1
+728.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/s
+hare/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/share/texmf-dist
+/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf-dist/fonts/type1/pu
+blic/cm-super/sfrm1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/s
+frm1728.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti0800.pfb></u
+sr/share/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
+Output written on paper.pdf (8 pages, 161409 bytes).
 PDF statistics:
- 118 PDF objects out of 1000 (max. 8388607)
- 98 compressed objects within 1 object stream
+ 125 PDF objects out of 1000 (max. 8388607)
+ 103 compressed objects within 2 object streams
  18 named destinations out of 1000 (max. 500000)
  49 words of extra memory for PDF output out of 10000 (max. 10000000)
 
