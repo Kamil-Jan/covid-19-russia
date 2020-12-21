@@ -6,7 +6,11 @@
 \usepackage[utf8]{inputenc}  % utf8 encoding
 \usepackage[russian]{babel}  % enable Russian language
 \usepackage{titling}         % for \thetitle, \thedate
-\usepackage{enumitem}
+\usepackage{enumitem}        % for lists customization
+\usepackage{graphicx}        % for adding images
+\usepackage{prettyref}       % for configuring references
+\usepackage{caption}         % for figure caption customization
+\usepackage{subcaption}      % for \subfigure
 %------------------------------------------------
 
 % Geometry
@@ -73,6 +77,7 @@
 %------------------------------------------------
 \setlength{\parindent}{0pt}
 \setlist{itemsep=1pt}
+\newrefformat{fig}{(рис. \ref{#1})}
 %------------------------------------------------
 
 % Title, author, date
@@ -116,36 +121,14 @@
 стало возможным предотвращение множества новых случаев заболевания.
 \\
 
-\begin{normalsize}
-    \textbf{Тема:}
-\end{normalsize}
-\\
-Темп распространения COVID-19 в Российской Федерации.
+Темой нашего проекта является темп распространения COVID-19 в Российской Федерации. Актуальность исследования связана со стремительным ростом числа заболевших данной инфекцией в нашей стране, а также с незнанием реальной опасности коронавируса на фоне второй волны эпидемии.
 \\
 
-\begin{normalsize}
-    \textbf{Актуальность:}
-\end{normalsize}
-\\
-Актуальность исследования связана со стремительным ростом числа
-заболевших данной инфекцией в нашей стране, а также с незнанием реальной
-опасности коронавируса на фоне второй волны эпидемии.
-\\
-
-\begin{normalsize}
-    \textbf{Проблема:}
-\end{normalsize}
-\\
 Мы постараемся ответить на вопрос: \textquote{Как распространялась
 коронавирусная инфекция COVID-19 в Российской Федерации?}
 \\
 
-\begin{normalsize}
-    \textbf{Цель:}
-\end{normalsize}
-\\
-Наглядное изучение особенностей распространения
-вируса в России с помощью графиков и диаграмм.
+ Целью данной работы является наглядное изучение особенностей распространения вируса в России с помощью графиков и диаграмм.
 \\
 
 \begin{normalsize}
@@ -383,7 +366,7 @@ Teams и их аналоги.
 \newpage
 
 \section{Распространение коронавируса в России}
-\subsection{Подготовительные работы}
+\subsection{Сбор данных}
 \subsubsection{Сбор данных о подтвержденных случаях за сутки}
 
 Для сбора информации о новых случаях заболевания на территории Российской
@@ -392,10 +375,26 @@ Teams и их аналоги.
 содержащую информационную сводку с числом заболевших новым коронавирусом по
 регионам. Чтобы собрать эти данные, мы создали скрипт на языке Python, который
 сохраняeт ссылки на новостные статьи в отдельном файле, а затем с помощью
-модулей \textquote{requests} и \textquote{BeautifulSoup} из библиотеки Python,
+модулей \textquote{requests} и \textquote{BeautifulSoup} из библиотеки Python
 мы извлекаем статистику о заболевших из HTML разметки сайта. Полученные записи
-сохраняем в виде электронной таблицы \textquote{csv} с помощью модуля
-\textquote{pandas}.
+сохраняем в двух электронных таблицах \textquote{csv}. В первой таблице хранятся
+данные о новых зараженных по регионам, а во второй данные по всей России \prettyref{fig:collection1_res}.
+
+\begin{figure}[h]
+    \centering
+    \begin{tabular}[c]{cc}
+    \begin{subfigure}[b]{0.49\textwidth} \centering
+        \includegraphics[height=130pt]{../plots/regions_df1.png}
+        \caption{Данные по регионам} \label{fig:regions_df1}
+    \end{subfigure}&
+
+    \begin{subfigure}[b]{0.49\textwidth} \centering
+        \includegraphics[height=130pt]{../plots/country_df1.png}
+        \caption{Данные по России} \label{fig:country_df1}
+    \end{subfigure}
+    \end{tabular}
+    \caption{Электронные таблицы} \label{fig:collection1_res}
+\end{figure}
 
 \subsubsection{Сбор данных о выздоровевших и умерших за сутки}
 
@@ -403,14 +402,24 @@ Teams и их аналоги.
 данные с официального сайта оперативного штаба \textquote{Стопкоронавирус.рф}.
 Они так же, как и Роспотребнадзор, публикуют статьи с информацией о динамике
 распространения коронавируса, а именно данные о выздоровевших и умерших за
-сутки по регионам страны.
+сутки по регионам страны. По аналогии со сбором данных о подтвержденных случаях за сутки мы создали скрипты на языке \textquote{Python}, которые извлекают из HTML разметки сайта необходимую нам информацию. Однако мы заметили, что до 6 мая на сайте \textquote{Стопкоронавирус.рф} ежедневная статистика не имела единого шаблона, что затрудняло нашу работу. Поэтому мы решили заполнить пропущенные данные информацией из уже существующей базы данных по коронавирусу в России. Полученные значения мы объединили с данными о подтвержденных случаях. \prettyref{fig:collection2_res}
 
-\subsubsection{Построение графиков и диаграмм}
+\begin{figure}[h]
+    \centering
+    \begin{tabular}[c]{cc}
+    \begin{subfigure}[b]{\textwidth} \centering
+        \includegraphics[height=130pt]{../plots/regions_df2.png}
+        \caption{Данные по регионам} \label{fig:regions_df2}
+    \end{subfigure}& \\
 
-\subsubsection{Создание активной карты регионов РФ}
-
+    \begin{subfigure}[b]{\textwidth} \centering
+        \includegraphics[height=130pt]{../plots/country_df2.png}
+        \caption{Данные по России} \label{fig:country_df2}
+    \end{subfigure}
+    \end{tabular}
+    \caption{Электронные таблицы} \label{fig:collection2_res}
+\end{figure}
 \newpage
-<<<<<<< HEAD
 
 \subsection{Связь России и Москвы}
 
@@ -422,7 +431,7 @@ Teams и их аналоги.
 
 Резкий рост наблюдался в апреле 2020 года,
 что впоследствии было названо первой волной коронавируса, ее легко распознать
-на графике (рис. 1). На этом временном отрезке можно видеть, что поведение
+на графике \prettyref{fig:day_confirmed_russia_moscow}. На этом временном отрезке можно видеть, что поведение
 графика заражений во всей стране схоже с рисунком, который образует график
 заражений в одной лишь Москве. Заметим, что разрыв (расстояние от пиков одного графика до
 соответствующих пиков другого) между двумя этими графиками заметно меньше, чем
@@ -434,10 +443,15 @@ Teams и их аналоги.
 коронавирусом в целой стране.
 \\
 
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.55]{../plots/1day_confirmed_russia_moscow.png}
+    \caption{Заболевшие за сутки, чел.} \label{fig:day_confirmed_russia_moscow}
+\end{figure}
+
+
 \newpage
 
-=======
->>>>>>> 78bd99781afabe4c7ba95d616de1e205e895a058
 \phantomsection
 \addcontentsline{toc}{section}{Список литературы}
 \input{bibliography.tex}
