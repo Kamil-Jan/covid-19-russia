@@ -7,6 +7,10 @@
 \usepackage[russian]{babel}  % enable Russian language
 \usepackage{titling}         % for \thetitle, \thedate
 \usepackage{enumitem}
+\usepackage{graphicx}        % for adding images
+\usepackage{prettyref}       % for configuring references
+\usepackage{caption}
+\usepackage{wrapfig}
 %------------------------------------------------
 
 % Geometry
@@ -73,6 +77,7 @@
 %------------------------------------------------
 \setlength{\parindent}{0pt}
 \setlist{itemsep=1pt}
+\newrefformat{fig}{(рис. \ref{#1})}
 %------------------------------------------------
 
 % Title, author, date
@@ -158,8 +163,8 @@
     \item[\bfseries--] выяснить, были ли предпринятые властями меры эффективными.
 \end{itemize}
 
-В связи с этим, предметом исследования станет инфекция
-COVID-19, а объектом — ее распространение на территории нашей страны.
+В связи с этим предметом исследования станет инфекция
+COVID-19, а объектом — ее распространения на территории нашей страны.
 \newpage
 
 \section{Основные сведения о COVID-19}
@@ -410,7 +415,6 @@ Teams и их аналоги.
 \subsubsection{Создание активной карты регионов РФ}
 
 \newpage
-<<<<<<< HEAD
 
 \subsection{Связь России и Москвы}
 
@@ -420,9 +424,18 @@ Teams и их аналоги.
 значения в середине весны.
 \\
 
+\begin{wrapfigure}{l}{0.50\textwidth}
+    \vspace{-20pt}
+    \centering
+    \includegraphics[width=0.50\textwidth]{../plots/1day_confirmed_russia_moscow.png}
+    \vspace{-20pt}
+    \captionof{figure}{Заболевшие за сутки, чел.}
+    \label{fig:day_confirmed_russia_moscow}
+\end{wrapfigure}
+
 Резкий рост наблюдался в апреле 2020 года,
 что впоследствии было названо первой волной коронавируса, ее легко распознать
-на графике (рис. 1). На этом временном отрезке можно видеть, что поведение
+на графике \prettyref{fig:day_confirmed_russia_moscow}. На этом временном отрезке можно видеть, что поведение
 графика заражений во всей стране схоже с рисунком, который образует график
 заражений в одной лишь Москве. Заметим, что разрыв (расстояние от пиков одного графика до
 соответствующих пиков другого) между двумя этими графиками заметно меньше, чем
@@ -434,10 +447,32 @@ Teams и их аналоги.
 коронавирусом в целой стране.
 \\
 
+\begin{wrapfigure}{r}{0.50\textwidth}
+    \vspace{-20pt}
+    \centering
+    \includegraphics[width=0.50\textwidth]{../plots/2active_cases_russia_moscow.png}
+    \vspace{-20pt}
+    \caption{Активные случаи, чел.}
+    \vspace{-20pt}
+    \label{fig:day_active_russia_moscow}
+\end{wrapfigure}
+
+После апрельских пиков, ситуация в столице начинает уравновешиваться, согласно
+всемирной тенденции:
+\begin{itemize}
+    \item[-] число зараженных каждый день падает, пока не достигает плато;
+    \item[-] смертность развивается похожим
+        образом ;
+    \item[-] число активных случаев падают медленно \prettyref{fig:day_active_russia_moscow};
+    \item[-] число выздоровевших превышает число зараженных в день.
+\end{itemize}
+
+Ситуация во всей стране развивается подобным образом до начала-середины ноября.
+В этот период все показатели стали резко возрастать. Начинается вторая волна
+коронавируса. Ясно можно видеть на каждом из графиков.
+
 \newpage
 
-=======
->>>>>>> 78bd99781afabe4c7ba95d616de1e205e895a058
 \phantomsection
 \addcontentsline{toc}{section}{Список литературы}
 \input{bibliography.tex}
